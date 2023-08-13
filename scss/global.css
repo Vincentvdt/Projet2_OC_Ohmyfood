@@ -46,11 +46,83 @@ input {
 }
 
 html {
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  color: #000;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: #F6F6F6;
+  color: #OOO;
   font-style: normal;
   line-height: normal;
+}
+
+.header__logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background: #FFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.header__logo .header__back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 17px;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.header__logo .header__back svg {
+  width: 17px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #353535;
+  transition: 0.2s ease-in-out;
+}
+.header__logo .header__back:hover {
+  cursor: pointer;
+}
+.header__logo .header__back:hover svg {
+  color: #OOO;
+}
+.header__logo .header__name {
+  flex-shrink: 0;
+  padding: 0 19px 0 16px;
+  font-family: "Shrikhand", cursive;
+  color: #101010;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.header__location {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background-color: #EAEAEA;
+}
+.header__location-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.header__location-icon svg {
+  width: 100%;
+  height: 100%;
+  color: #353535;
+}
+.header__location-text {
+  font-weight: 500;
+  color: #353535;
 }
 
 /*# sourceMappingURL=global.css.map */
