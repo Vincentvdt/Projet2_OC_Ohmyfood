@@ -1,0 +1,10 @@
+@import "./_reset.scss";
+@import "./_variables.scss";
+
+html {
+  font-family: $main-font;
+  font-size: $main-font-size;
+  color: $text-color;
+  font-style: normal;
+  line-height: normal;
+}
