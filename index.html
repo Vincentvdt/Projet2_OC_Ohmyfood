@@ -1,43 +1,82 @@
 <!doctype html>
 <html lang="en">
-  <head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-		  name="viewport">
-	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+              name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <title>Document</title>
+        <!--CSS-->
+        <link href="./scss/global.css" rel="stylesheet">
 
-	<title>Document</title>
+    </head>
+    <body>
+        <header>
+            <div class="header__logo">
+                <div class="header__back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <p class="header__name logo">
+                    ohmyfood
+                </p>
+            </div>
+            <div class="header__location">
+                <div class="header__location-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <p class="header__location-text">New York, Brooklyn</p>
+            </div>
+        </header>
+        <main>
+            <section class="hero-banner">
+                <div class="hero-banner__content">
+                    <h1 class="hero-banner__title">Réservez le menu qui vous convient</h1>
+                    <p class="hero-banner__subtitle">
+                        Découvrez des restaurants d’exception, sélectionnés par nos soins.
+                    </p>
+                </div>
+                <button class="btn">Explorer les restaurants</button>
+            </section>
+            <section class="functioning">
+                <h2>Fonctionnement</h2>
+                <ul class="functioning__steps">
+                    <li class="functioning__step">
+                        <div class="functioning__step-sort">
+                            <span>1</span>
+                        </div>
+                        <div class="step__content">
+                            <div class="step__content-icon">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <p class="step__content-text">Choisissez un restaurant</p>
+                        </div>
+                    </li>
+                    <li class="functioning__step">
+                        <div class="functioning__step-sort">
+                            <span>2</span>
+                        </div>
+                        <div class="step__content">
+                            <div class="step__content-icon">
+                                <i class="fa-solid fa-list-ul"></i>
+                            </div>
+                            <p class="step__content-text">Composez votre menu</p>
+                        </div>
+                    </li>
+                    <li class="functioning__step">
+                        <div class="functioning__step-sort">
+                            <span>3</span>
+                        </div>
+                        <div class="step__content">
+                            <div class="step__content-icon">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <p class="step__content-text">Dégustez au restaurant</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
 
-	<!--FONTS-->
-	<link href="https://fonts.googleapis.com" rel="preconnect">
-	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
-		  rel="stylesheet">
-
-
-	<!--CSS-->
-	<link href="./scss/global.css" rel="stylesheet">
-
-  </head>
-  <body>
-	<header>
-	  <div class="header__logo">
-		<div class="header__back">
-		  <i class="fa-solid fa-arrow-left"></i>
-		</div>
-		<p class="header__name">
-		  ohmyfood
-		</p>
-	  </div>
-	  <div class="header__location">
-		<div class="header__location-icon">
-		  <i class="fa-solid fa-location-dot"></i>
-		</div>
-		<p class="header__location-text">New York, Brooklyn</p>
-	  </div>
-	</header>
-
-	<!--FONTAWESOME-->
-	<script crossorigin="anonymous" src="https://kit.fontawesome.com/73c6dc8226.js"></script>
-  </body>
+        <script crossorigin="anonymous" src="https://kit.fontawesome.com/73c6dc8226.js"></script>
+    </body>
 </html>

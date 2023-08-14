@@ -1,18 +1,12 @@
-@import "./_reset.scss";
-@import "./_variables.scss";
-@import "./_mixins.scss";
-
-html {
-  font-size: $main-font-size;
-}
+@import "base/normalize";
+@import "base/typography";
+@import "utils/variables";
+@import "utils/mixins";
+@import "components/button";
+@import "base/fonts";
 
 body {
-  font-size: $main-font-size;
-  font-family: $main-font;
   background-color: #F6F6F6;
-  color: $text-color;
-  font-style: normal;
-  line-height: normal;
 }
 
 .header__logo {
@@ -52,10 +46,8 @@ body {
   .header__name {
     flex-shrink: 0;
     padding: 0 19px 0 16px;
-    font-family: $title-font;
     color: $black-2;
-    font-size: 1.875rem;
-    font-weight: 400;
+
   }
 }
 
@@ -85,3 +77,41 @@ body {
     color: $grey;
   }
 }
+
+.hero-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+  padding: 40px 25px 57px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  &__title {
+    padding: 0 19px;
+  }
+
+  &__subtitle {
+    color: $grey;
+  }
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 48px 20px 68px;
+  background: $white;
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+

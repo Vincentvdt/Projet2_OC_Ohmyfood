@@ -1,17 +1,17 @@
-$main-font:'Roboto', sans-serif;
-$title-font: 'Shrikhand', cursive;
+$font-family-base:'Roboto', sans-serif;
+$font-family-headings: 'Shrikhand', cursive;
 
 $main-font-size: 16px;
 
 $white: #FFF;
-$black: #OOO;
+$black: #000;
 $black-2: #101010;
 $grey: #353535;
 $grey-2: #EAEAEA;
+$button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $highlight-color: #99E2D0;
 $text-color: $black;
-
 
