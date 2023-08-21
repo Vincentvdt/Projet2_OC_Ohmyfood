@@ -100,6 +100,67 @@ h2 {
   font-weight: 500;
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   color: #FFF;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+.btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  background: #FFF;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.card__img-wrapper {
+  width: 346px;
+  height: 174px;
+  flex-shrink: 0;
+}
+.card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 43px 16px 13px;
+}
+.card__content .content__info {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 5px;
+}
+.card__content .content__info-title {
+  align-self: stretch;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.card__content .content__info-location {
+  align-self: stretch;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1;
+}
+.card__content-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 21px;
+  flex-shrink: 0;
+  color: #FFF;
+}
+.card__content-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.card__content-icon svg path {
+  stroke-width: 1px;
 }
 
 body {
@@ -262,6 +323,19 @@ body {
 .functioning__step .step__content-text {
   line-height: 1;
   font-weight: 500;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 54px 20px 66px;
+}
+.restaurant .cards-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
 }
 
 /*# sourceMappingURL=global.css.map */

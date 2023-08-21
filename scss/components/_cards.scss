@@ -1,0 +1,62 @@
+@import '../utils/variables';
+@import "../utils/mixins";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  background: $white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
+
+  &__img-wrapper {
+    width: 346px;
+    height: 174px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px 43px 16px 13px;
+
+    .content__info {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      gap: 5px;
+
+      &-title {
+        align-self: stretch;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      &-location {
+        align-self: stretch;
+        font-size: 1.0625rem;
+        font-weight: 300;
+        line-height: 1;
+      }
+    }
+
+    &-icon {
+      @include icon-wrapper;
+      width: 22px;
+      height: 21px;
+      flex-shrink: 0;
+      color: $white;
+
+      svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+          stroke-width: 1px;
+        }
+      }
+    }
+  }
+}
