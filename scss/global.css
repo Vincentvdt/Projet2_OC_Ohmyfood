@@ -149,7 +149,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 16px 43px 16px 13px;
+  padding: 16px 25px 12px 13px;
 }
 .card__content .content__info {
   display: flex;
@@ -211,6 +211,12 @@ h2 {
 
 body {
   background-color: #F6F6F6;
+}
+
+.container {
+  max-width: 375px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .header__logo {
@@ -277,12 +283,18 @@ body {
   color: #353535;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  margin: 40px 0 65px 0;
+}
+
 .hero-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 27px;
-  padding: 40px 25px 57px;
 }
 .hero-banner__content {
   display: flex;
@@ -373,7 +385,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  padding: 54px 20px 66px;
 }
 .restaurant .cards-list {
   display: flex;
