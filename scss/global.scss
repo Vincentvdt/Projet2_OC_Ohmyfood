@@ -13,8 +13,19 @@ body {
 .container {
   max-width: 375px;
   padding: 0 20px;
-  //margin: 0 auto;
+  margin: 0 auto;
   box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+  }
 }
 
 .header__logo {
@@ -28,6 +39,7 @@ body {
 
   .header__back {
     @include icon_wrapper;
+    display: none;
     position: absolute;
     left: 17px;
     width: 30px;
@@ -92,7 +104,12 @@ main {
   gap: 55px;
   margin: 40px 0 65px 0;
 
+  @media screen and (min-width: 768px) {
+    gap: 30px;
+    margin: 30px 0;
+  }
 }
+
 
 .hero-banner {
   display: flex;
@@ -118,11 +135,17 @@ main {
 }
 
 .functioning {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-  padding: 48px 20px 68px;
   background: $white;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding: 48px 20px 68px;
+    @media screen and (min-width: 768px) {
+      padding: 50px 20px;
+    }
+  }
 
   &__steps {
     display: flex;

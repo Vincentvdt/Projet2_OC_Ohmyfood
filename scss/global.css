@@ -216,7 +216,24 @@ body {
 .container {
   max-width: 375px;
   padding: 0 20px;
+  margin: 0 auto;
   box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
 }
 
 .header__logo {
@@ -232,6 +249,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
   position: absolute;
   left: 17px;
   width: 30px;
@@ -289,6 +307,12 @@ main {
   gap: 55px;
   margin: 40px 0 65px 0;
 }
+@media screen and (min-width: 768px) {
+  main {
+    gap: 30px;
+    margin: 30px 0;
+  }
+}
 
 .hero-banner {
   display: flex;
@@ -310,11 +334,18 @@ main {
 }
 
 .functioning {
+  background: #FFF;
+}
+.functioning__wrapper {
   display: flex;
   flex-direction: column;
   gap: 26px;
   padding: 48px 20px 68px;
-  background: #FFF;
+}
+@media screen and (min-width: 768px) {
+  .functioning__wrapper {
+    padding: 50px 20px;
+  }
 }
 .functioning__steps {
   display: flex;
