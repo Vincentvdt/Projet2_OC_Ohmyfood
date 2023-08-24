@@ -115,18 +115,12 @@ body {
     gap: 25px;
   }
 
+
   &__step {
     display: flex;
     align-items: center;
     align-self: stretch;
-
-    &:hover {
-      cursor: pointer;
-
-      .step__content-icon svg {
-        color: $primary-color
-      }
-    }
+    cursor: pointer;
 
     .step__sort {
       display: flex;
@@ -182,6 +176,12 @@ body {
       }
     }
   }
+
+  &__step.selected {
+      .step__content-icon svg {
+        color: $primary-color
+      }
+  }
 }
 
 .restaurant {
@@ -196,6 +196,59 @@ body {
     align-items: center;
     gap: 18px;
   }
+}
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 25px;
+  background: $grey;
+
+  .footer__logo {
+    color: $white;
+  }
+
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    &-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+
+      .list__item-icon {
+        @include icon-wrapper;
+        width: 11px;
+        height: 13px;
+        flex-shrink: 0;
+
+        svg {
+          width: 100%;
+
+          color: $white;
+        }
+
+        + .list__item-text a {
+          font-weight: 500;
+        }
+      }
+
+      .list__item-text a {
+        line-height: normal;
+        color: $white;
+        text-decoration: none;
+        font-weight: 400;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 

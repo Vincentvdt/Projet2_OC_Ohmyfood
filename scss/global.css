@@ -110,17 +110,40 @@ h2 {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-self: stretch;
   background: #FFF;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+.card__new {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 10px;
+  border-radius: 2px;
+  color: #008766;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: #99E2D0;
+}
+.card.new .card__new {
+  display: inline-block;
 }
 .card__img-wrapper {
-  width: 346px;
   height: 174px;
+  align-self: stretch;
   flex-shrink: 0;
+}
+.card__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .card__content {
   display: flex;
@@ -147,20 +170,43 @@ h2 {
   line-height: 1;
 }
 .card__content-icon {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 22px;
   height: 21px;
   flex-shrink: 0;
-  color: #FFF;
+  color: black;
+  cursor: pointer;
+}
+.card__content-icon input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: none;
+}
+.card__content-icon input[type=checkbox]:checked {
+  display: inline-block;
+}
+.card__content-icon input[type=checkbox]:checked ~ .checked {
+  display: inline-block;
+}
+.card__content-icon input[type=checkbox]:checked ~ .unchecked {
+  display: none;
 }
 .card__content-icon svg {
   width: 100%;
   height: 100%;
 }
-.card__content-icon svg path {
-  stroke-width: 1px;
+.card__content-icon .unchecked {
+  display: inline-block;
+}
+.card__content-icon .checked {
+  display: none;
+  color: #9356DC;
 }
 
 body {
@@ -267,12 +313,7 @@ body {
   display: flex;
   align-items: center;
   align-self: stretch;
-}
-.functioning__step:hover {
   cursor: pointer;
-}
-.functioning__step:hover .step__content-icon svg {
-  color: #9356DC;
 }
 .functioning__step .step__sort {
   display: flex;
@@ -324,6 +365,9 @@ body {
   line-height: 1;
   font-weight: 500;
 }
+.functioning__step.selected .step__content-icon svg {
+  color: #9356DC;
+}
 
 .restaurant {
   display: flex;
@@ -336,6 +380,52 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 18px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 25px;
+  background: #353535;
+}
+footer .footer__logo {
+  color: #FFF;
+}
+footer .footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .footer__list-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+footer .footer__list-item .list__item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11px;
+  height: 13px;
+  flex-shrink: 0;
+}
+footer .footer__list-item .list__item-icon svg {
+  width: 100%;
+  color: #FFF;
+}
+footer .footer__list-item .list__item-icon + .list__item-text a {
+  font-weight: 500;
+}
+footer .footer__list-item .list__item-text a {
+  line-height: normal;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 400;
+}
+footer .footer__list-item .list__item-text a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=global.css.map */
