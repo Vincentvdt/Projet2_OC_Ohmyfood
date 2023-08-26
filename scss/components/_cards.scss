@@ -5,13 +5,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-self: stretch;
   background: $white;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
   overflow: hidden;
   cursor: pointer;
+  flex-basis: 100%;
+  max-width: 490px;
+  flex-shrink: 0;
 
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 25px);
+  }
 
 
   &__new {
@@ -29,12 +34,17 @@
 
   &.new .card__new {
     display: inline-block;
+      flex-shrink: 0;
   }
 
   &__img-wrapper {
     height: 174px;
     align-self: stretch;
     flex-shrink: 0;
+
+    @media screen and (min-width: 768px) {
+      height: 124px;
+    }
 
     img {
       width: 100%;
