@@ -118,9 +118,8 @@ h2 {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  flex-basis: 100%;
-  max-width: 490px;
   flex-shrink: 0;
+  align-self: stretch;
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -450,14 +449,18 @@ main {
 .restaurant .cards-list {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 18px;
 }
 @media screen and (min-width: 768px) {
   .restaurant .cards-list {
-    flex-direction: row;
-    gap: 50px;
-    justify-content: space-between;
+    flex-direction: unset;
+    flex-wrap: unset;
+    gap: unset;
+    display: grid;
+    column-gap: 100px;
+    row-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

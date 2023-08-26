@@ -246,13 +246,17 @@ main {
   .cards-list {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 18px;
 
     @media screen and (min-width: 768px) {
-      flex-direction: row;
-      gap: 50px;
-      justify-content: space-between;
+      flex-direction: unset;
+      flex-wrap: unset;
+      gap: unset;
+      display: grid;
+      column-gap: 100px;
+      row-gap: 50px;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
