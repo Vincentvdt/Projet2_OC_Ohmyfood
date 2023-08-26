@@ -254,8 +254,8 @@ main {
       flex-wrap: unset;
       gap: unset;
       display: grid;
-      column-gap: 100px;
-      row-gap: 50px;
+      column-gap: 50px;
+      row-gap: 25px;
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -270,8 +270,16 @@ footer {
   background: $grey;
   @media screen and (min-width: 768px) {
     flex-direction: row-reverse;
-    padding: 60px 30px 25px;
-    gap: 60px;
+    padding: 30px 25px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 16px;
+  }
+
+  .footer__nav {
+    @media screen and (min-width: 768px) {
+      flex: 1;
+    }
   }
 
   .footer__logo {
@@ -283,22 +291,20 @@ footer {
     flex-direction: column;
     gap: 7px;
 
+    .footer__list-item:nth-of-type(2) {
+      margin-right: 1.2rem;
+    }
+
 
     @media screen and (min-width: 768px) {
       flex-direction: row;
-      gap: 10px;
-
-      li:nth-child(2) {
-        margin-right: 25px;
-      }
-
+          gap: 15px;
     }
 
     &-item {
       display: flex;
       gap: 10px;
       align-items: center;
-
 
       .list__item-icon {
         @include icon-wrapper;
@@ -307,8 +313,8 @@ footer {
         flex-shrink: 0;
 
         svg {
-          width: 100%;
-
+          width: auto;
+          height: 100%;
           color: $white;
         }
 

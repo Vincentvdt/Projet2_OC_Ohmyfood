@@ -458,8 +458,8 @@ main {
     flex-wrap: unset;
     gap: unset;
     display: grid;
-    column-gap: 100px;
-    row-gap: 50px;
+    column-gap: 50px;
+    row-gap: 25px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -475,8 +475,15 @@ footer {
 @media screen and (min-width: 768px) {
   footer {
     flex-direction: row-reverse;
-    padding: 60px 30px 25px;
-    gap: 60px;
+    padding: 30px 25px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .footer__nav {
+    flex: 1;
   }
 }
 footer .footer__logo {
@@ -487,13 +494,13 @@ footer .footer__list {
   flex-direction: column;
   gap: 7px;
 }
+footer .footer__list .footer__list-item:nth-of-type(2) {
+  margin-right: 1.2rem;
+}
 @media screen and (min-width: 768px) {
   footer .footer__list {
     flex-direction: row;
-    gap: 10px;
-  }
-  footer .footer__list li:nth-child(2) {
-    margin-right: 25px;
+    gap: 15px;
   }
 }
 footer .footer__list-item {
@@ -510,7 +517,8 @@ footer .footer__list-item .list__item-icon {
   flex-shrink: 0;
 }
 footer .footer__list-item .list__item-icon svg {
-  width: 100%;
+  width: auto;
+  height: 100%;
   color: #FFF;
 }
 footer .footer__list-item .list__item-icon + .list__item-text a {
