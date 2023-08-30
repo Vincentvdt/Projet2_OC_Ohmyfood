@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Menu - La palette du goût</title>
+    <link href="../scss/global.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header__logo">
+        <a class="header__back" href="../index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <p class="header__name logo">
+          ohmyfood
+        </p>
+      </div>
+      <div class="header__location desactived">
+        <div class="header__location-icon ">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <p class="header__location-text">New York, Brooklyn</p>
+      </div>
+    </header>
+
+    <main class="restaurant-page ">
+      <div class="restaurant-page__banner-wrapper">
+        <img alt="" class="img-fluid" src="../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+      </div>
+      <section class="menu container">
+        <h1>La palette du goût
+          <label class="card__content-icon">
+            <input type="checkbox"/>
+            <i class="fa-regular fa-heart unchecked"></i>
+            <i class="fa-solid fa-heart checked"></i>
+          </label>
+        </h1>
+        <div class="menu__section">
+          <h2 class="menu__section-title">Entrées</h2>
+          <div class="menu-card__list">
+            <article class="menu-card">
+              <p class="menu-card__title">Fricassée d'escargots</p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">Au piment d'Espelette</p>
+                <p class="menu-card__content-price">25€</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <p class="menu-card__title">Foie gras de canard mi-cuit</p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">Et ses copeaux de truffe noire</p>
+                <p class="menu-card__content-price">35€</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <p class="menu-card__title">Œuf au plat</p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">Assaisonné à la truffe sur lit de caviar</p>
+                <p class="menu-card__content-price">20€</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="menu__section">
+          <h2 class="menu__section-title">Plats</h2>
+          <div class="menu-card__list">
+            <article class="menu-card">
+              <p class="menu-card__title">Filet de bœuf aux herbes</p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">Accompagné de sa ribambelle de légumes</p>
+                <p class="menu-card__content-price">40€</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <p class="menu-card__title">Parmentier de queue de bœuf</p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">À la truffe noire sur sa purée de panais</p>
+                <p class="menu-card__content-price">35€</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <p class="menu-card__title">Filet de turbot</p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">Aux agrumes</p>
+                <p class="menu-card__content-price">44€</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="menu__section">
+          <h2 class="menu__section-title">Desserts</h2>
+          <div class="menu-card__list">
+            <article class="menu-card">
+              <p class="menu-card__title">Paris-Brest</p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">Revisité</p>
+                <p class="menu-card__content-price">18€</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <p class="menu-card__title">Macaron au chocolat d'exception </p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">Et glace à la vanille de Madagascar</p>
+                <p class="menu-card__content-price">22€</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <p class="menu-card__title">Mousse au chocolat</p>
+              <div class="menu-card__content">
+                <p class="menu-card__content-description">Au piment d'Espelette et à la truffe noire</p>
+                <p class="menu-card__content-price">23€</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="btn btn-order">Commander</button>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer__wrapper container">
+        <p class="footer__logo logo logo-sm">
+          ohmyfood
+        </p>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <div class="list__item-icon">
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <p class="list__item-text">
+                <a href="">Proposer un restaurant</a>
+              </p>
+            </li>
+            <li class="footer__list-item">
+              <div class="list__item-icon">
+                <i class="fa-solid fa-handshake-angle"></i>
+              </div>
+              <p class="list__item-text">
+                <a href="">Devenir partenaire</a>
+              </p>
+            </li>
+            <li class="footer__list-item">
+              <p class="list__item-text">
+                <a href="">Mentions légales</a>
+              </p>
+            </li>
+            <li class="footer__list-item">
+              <p class="list__item-text">
+                <a href="">Contact</a>
+              </p>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/73c6dc8226.js"></script>
+  </body>
+</html>
