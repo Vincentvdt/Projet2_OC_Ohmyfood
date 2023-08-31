@@ -20,35 +20,35 @@
   }
 }
 
-// Small devices
+// Small devices (Small tablets and large smartphones)
 @mixin sm {
   @media (min-width: #{$screen-sm}) {
     @content;
   }
 }
 
-// Medium devices
+// Medium devices (Small tablets)
 @mixin md {
   @media (min-width: #{$screen-md}) {
     @content;
   }
 }
 
-// Large devices
+// Large devices (Tablets and small desktops)
 @mixin lg {
   @media (min-width: #{$screen-lg}) {
     @content;
   }
 }
 
-// Extra large devices
+// Extra large devices (Large tablets and desktops)
 @mixin xl {
   @media (min-width: #{$screen-xl}) {
     @content;
   }
 }
 
-// Extra extra large devices
+// Extra extra large devices (Large desktops)
 @mixin xxl {
   @media (min-width: #{$screen-xxl}) {
     @content;

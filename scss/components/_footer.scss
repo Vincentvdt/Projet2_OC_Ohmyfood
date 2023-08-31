@@ -2,8 +2,9 @@
 @import "../utils/mixins";
 
 footer {
-    background: $grey;
+  background: $grey;
 }
+
 .footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -11,7 +12,7 @@ footer {
   gap: 16px;
   padding: 22px 25px;
 
-  @media screen and (min-width: 768px) {
+  @include md {
     flex-direction: row-reverse;
     padding: 44px 25px;
     justify-content: flex-start;
@@ -19,11 +20,12 @@ footer {
     gap: 16px;
   }
 
-@media screen and (min-width:1440px) {
-  gap: 90px
-}
+  @include xl {
+    gap: 90px
+  }
+
   .footer__nav {
-    @media screen and (min-width: 768px) {
+    @include md {
       flex: 1;
     }
   }
@@ -45,12 +47,12 @@ footer {
     }
 
 
-    @media screen and (min-width: 768px) {
+    @include md {
       flex-direction: row;
       gap: 15px;
     }
 
-    @media screen and (min-width:1440px) {
+    @include xl {
       justify-content: flex-end;
     }
 
