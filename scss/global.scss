@@ -198,7 +198,7 @@
   .container {
     padding: 0 13px 30px;
     @media screen and (min-width: 1440px) {
-      padding: 0 250px 30px;
+      padding: 0 210px 30px;
     }
   }
 
@@ -225,7 +225,7 @@
     border-top: 51px solid #F6F6F6;
     background: #F6F6F6;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 992px) {
       align-items: center;
     }
 
