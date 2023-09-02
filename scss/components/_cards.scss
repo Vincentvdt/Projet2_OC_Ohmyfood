@@ -15,7 +15,7 @@
   text-decoration: none;
   color: $black;
 
-   @include md {
+  @include md {
     flex-basis: calc(100% / 2 - 25px);
   }
 
@@ -42,13 +42,13 @@
     align-self: stretch;
     flex-shrink: 0;
 
-     @include md {
+    @include md {
       height: 124px;
     }
 
-     @include xl {
-    height: 183px;
-  }
+    @include xl {
+      height: 183px;
+    }
 
     img {
       width: 100%;
