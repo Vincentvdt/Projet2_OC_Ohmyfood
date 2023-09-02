@@ -1,3 +1,5 @@
+@import "../utils/mixins";
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -5,13 +7,22 @@
   margin: 0 auto;
   box-sizing: border-box;
 
-  @media screen and (min-width: 768px) {
-    padding: 0 30px;
+  //@include md {
+  //  padding: 0 60px;
+  //}
+  //@include lg {
+  //  padding: 0 60px;
+  //}
+  @include md {
+    padding: 0 60px;
   }
-
-  @media screen and (min-width: 768px) {
+  @include xl {
     padding: 0 180px;
   }
+  //@include xxl {
+  //  padding: 0 180px;
+  //}
+
 }
 
 body {
