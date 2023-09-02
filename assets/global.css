@@ -152,7 +152,6 @@ main {
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  cursor: pointer;
   flex-shrink: 0;
   align-self: stretch;
   text-decoration: none;
@@ -223,48 +222,17 @@ main {
   font-weight: 300;
   line-height: 1;
 }
-.card__content-icon {
-  position: relative;
+.card__content .content__icon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 22px;
-  height: 21px;
-  flex-shrink: 0;
-  color: black;
-  cursor: pointer;
+  height: auto;
+  overflow: visible;
 }
-.card__content-icon svg {
+.card__content .content__icon svg {
   width: 100%;
   height: 100%;
-}
-.card__content-icon input[type=checkbox] {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  display: none;
-}
-.card__content-icon input[type=checkbox]:checked {
-  display: inline-block;
-}
-.card__content-icon input[type=checkbox]:checked ~ .checked {
-  display: inline-block;
-}
-.card__content-icon input[type=checkbox]:checked ~ .unchecked {
-  display: none;
-}
-.card__content-icon svg {
-  width: 100%;
-  height: 100%;
-}
-.card__content-icon .unchecked {
-  display: inline-block;
-}
-.card__content-icon .checked {
-  display: none;
-  color: #9356DC;
 }
 
 .menu-card {
@@ -467,6 +435,46 @@ footer {
 }
 .footer__wrapper .footer__list-item .list__item-text a:hover {
   text-decoration: underline;
+}
+
+@keyframes like {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.heart-icon {
+  cursor: pointer;
+}
+.heart-icon input[type=checkbox] {
+  -webkit-appearance: checkbox;
+  display: none;
+  cursor: pointer;
+}
+.heart-icon input[type=checkbox]:checked + svg .fill-heart {
+  opacity: 1;
+  animation: like 1s cubic-bezier(0.65, 0.18, 0, 1.48) forwards;
+}
+.heart-icon input[type=checkbox]:checked + svg .stroke-heart {
+  opacity: 0;
+  transform: scale(0);
+}
+.heart-icon svg {
+  overflow: visible;
+}
+.heart-icon svg .stroke-heart {
+  opacity: 1;
+  transform-origin: center;
+  fill: #101010;
+  transition: transform 0.2s ease, opacity 0.4s ease-in-out;
+}
+.heart-icon svg .fill-heart {
+  opacity: 0;
+  transform-origin: center;
+  transform: scale(0);
+  fill: url(#SVGID_1_);
 }
 
 .hero-banner {

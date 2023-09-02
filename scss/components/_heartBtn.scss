@@ -1,0 +1,57 @@
+@keyframes like {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-icon {
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    display: none; // Hide the checkbox
+    cursor: pointer;
+  }
+
+
+  input[type="checkbox"]:checked + svg .fill-heart {
+    opacity: 1;
+    animation: like 1s cubic-bezier(.65, .18, 0, 1.48) forwards;
+  }
+
+  input[type="checkbox"]:checked + svg .stroke-heart {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+
+  svg {
+    overflow: visible;
+
+    .stroke-heart {
+      opacity: 1;
+      transform-origin: center;
+      fill: #101010;
+      transition: transform .2s ease, opacity .4s ease-in-out;
+    }
+
+    .fill-heart {
+      opacity: 0;
+      transform-origin: center;
+      transform: scale(0); // Start with zero scale
+      fill: url(#SVGID_1_);
+    }
+
+  }
+
+}
+
+// Apply initial styles
+
+// Style the checkbox
+
+
+
