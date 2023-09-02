@@ -267,13 +267,6 @@ main {
   color: #9356DC;
 }
 
-.img-fluid {
-  width: unset;
-  max-width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-
 .menu-card {
   display: flex;
   flex-direction: column;
