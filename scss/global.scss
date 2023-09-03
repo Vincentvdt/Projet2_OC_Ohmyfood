@@ -10,6 +10,7 @@
 @import "components/header";
 @import "components/footer";
 @import "components/heartBtn";
+@import "components/loader";
 
 
 .hero-banner {
@@ -87,7 +88,7 @@
       flex-shrink: 0;
       background-color: $primary-color;
       border-radius: 50px;
-      z-index: 9999;
+      z-index: 9995;
 
       span {
         color: $white;
@@ -106,7 +107,7 @@
       border-radius: 20px;
       background: #F6F6F6;
       box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-      z-index: 9998;
+      z-index: 9994;
       flex-basis: 100%;
       align-self: stretch;
 
@@ -281,7 +282,4 @@
   }
 }
 
-
-
-// TODO: LOADER
 

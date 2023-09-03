@@ -1,0 +1,72 @@
+@import "../utils/variables";
+
+.loader-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: rgba(147, 86, 220, 0.98);
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+  animation: loaderFadeOut 1s ease forwards 3.5s;
+
+  .loader-icon {
+    transform: scale(3);
+    animation: zoomOut 1s cubic-bezier(.42, -0.5, 1, .7) forwards 2.5s;
+
+    svg {
+      overflow: visible;
+
+      path {
+        transform-origin: center;
+        fill: none;
+        stroke-dasharray: 0; //70
+        stroke-dashoffset: 90px;
+        stroke: rgba(255, 255, 255, 0);
+        animation: strokeDash 4s ease forwards 1s;
+      }
+    }
+  }
+}
+
+@keyframes strokeDash {
+  0% {
+    transform: scale3d(1, 1, 1);
+    fill: rgba(255, 255, 255, 0);
+    stroke-dasharray: 25px;
+  }
+  1% {
+    stroke: rgba(255, 255, 255, 1);
+  }
+  80% {
+    fill: rgba(255, 255, 255, 1);
+    stroke-dasharray: 265px;
+
+  }
+  100% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale3d(3, 3, 3);
+  }
+  to {
+    transform: scale3d(0, 0, 0);
+  }
+}
+
+@keyframes loaderFadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
