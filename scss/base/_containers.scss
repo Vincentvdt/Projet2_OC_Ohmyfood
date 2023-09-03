@@ -16,13 +16,33 @@
   @include md {
     padding: 0 60px;
   }
+  @include lg {
+    padding: 0 100px;
+  }
   @include xl {
+    padding: 0 140px;
+  }
+  @include xxl {
     padding: 0 180px;
   }
-  //@include xxl {
-  //  padding: 0 180px;
-  //}
+}
 
+.functioning__wrapper {
+  &.container {
+    padding: 48px 20px 68px;
+    @include md {
+      padding: 50px 60px;
+    }
+    @include lg {
+      padding: 50px 100px;
+    }
+    @include xl {
+      padding: 50px 140px;
+    }
+    @include xxl {
+      padding: 50px 180px;
+    }
+  }
 }
 
 body {
