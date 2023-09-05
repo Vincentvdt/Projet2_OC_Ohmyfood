@@ -644,6 +644,12 @@ footer {
   fill: url(#SVGID_1_);
 }
 
+body {
+  height: 100vh;
+  animation: showMain 4s ease forwards 2.4s;
+  overflow: hidden;
+}
+
 .loader-wrapper {
   position: absolute;
   display: flex;
@@ -657,34 +663,34 @@ footer {
   z-index: 9999;
   animation: loaderFadeOut 1s ease forwards 3.5s;
 }
-.loader-wrapper .loader-icon {
+.loader-wrapper .loader-spinner {
   transform: scale(1);
   animation: zoomOut 1s cubic-bezier(0.42, -0.5, 1, 0.7) forwards 2.5s;
 }
 @media (min-width: 576px) {
-  .loader-wrapper .loader-icon {
+  .loader-wrapper .loader-spinner {
     transform: scale(1.2);
   }
 }
 @media (min-width: 992px) {
-  .loader-wrapper .loader-icon {
+  .loader-wrapper .loader-spinner {
     transform: scale(1.5);
   }
 }
 @media (min-width: 1200px) {
-  .loader-wrapper .loader-icon {
+  .loader-wrapper .loader-spinner {
     transform: scale(1.8);
   }
 }
 @media (min-width: 1400px) {
-  .loader-wrapper .loader-icon {
+  .loader-wrapper .loader-spinner {
     transform: scale(2);
   }
 }
-.loader-wrapper .loader-icon svg {
+.loader-wrapper .loader-spinner svg {
   overflow: visible;
 }
-.loader-wrapper .loader-icon svg path {
+.loader-wrapper .loader-spinner svg path {
   transform-origin: center;
   fill: none;
   stroke-dasharray: 0;
@@ -722,6 +728,16 @@ footer {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@keyframes showMain {
+  0% {
+    height: 100vh;
+    overflow: hidden;
+  }
+  100% {
+    height: unset;
+    overflow: visible;
   }
 }
 .hero-banner {
