@@ -612,17 +612,20 @@ footer {
   cursor: pointer;
 }
 .heart-icon input[type=checkbox] {
+  -moz-appearance: checkbox;
   -webkit-appearance: checkbox;
   display: none;
   cursor: pointer;
 }
-.heart-icon input[type=checkbox]:hover + svg .fill-heart {
-  opacity: 1;
-  animation: hover 250ms forwards;
-}
-.heart-icon input[type=checkbox]:hover + svg .stroke-heart {
-  opacity: 0;
-  transform: scale(0.95);
+@media (hover: hover) {
+  .heart-icon input[type=checkbox]:hover + svg .fill-heart {
+    opacity: 1;
+    animation: hover 250ms forwards;
+  }
+  .heart-icon input[type=checkbox]:hover + svg .stroke-heart {
+    opacity: 0;
+    transform: scale(0.95);
+  }
 }
 .heart-icon input[type=checkbox]:checked + svg .fill-heart {
   animation: like-fill 1s cubic-bezier(0.65, 0.18, 0, 1.48) forwards;

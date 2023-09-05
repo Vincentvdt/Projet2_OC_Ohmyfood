@@ -35,19 +35,23 @@
   cursor: pointer;
 
   input[type="checkbox"] {
+    -moz-appearance: checkbox;
     -webkit-appearance: checkbox;
     display: none;
     cursor: pointer;
   }
 
-  input[type="checkbox"]:hover + svg .fill-heart {
-    opacity: 1;
-    animation: hover 250ms forwards;
-  }
+  @media(hover: hover) {
+    input[type="checkbox"]:hover + svg .fill-heart {
+      opacity: 1;
+      animation: hover 250ms forwards;
+    }
 
-  input[type="checkbox"]:hover + svg .stroke-heart {
-    opacity: 0;
-    transform: scale(0.95);
+
+    input[type="checkbox"]:hover + svg .stroke-heart {
+      opacity: 0;
+      transform: scale(0.95);
+    }
   }
 
 
@@ -72,16 +76,9 @@
     .fill-heart {
       opacity: 0;
       transform-origin: center;
-     fill: url(#SVGID_1_);
+      fill: url(#SVGID_1_);
     }
 
   }
 
 }
-
-// Apply initial styles
-
-// Style the checkbox
-
-
-
