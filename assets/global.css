@@ -655,14 +655,8 @@ footer {
   fill: url(#SVGID_1_);
 }
 
-body {
-  height: 100vh;
-  animation: showMain 4s ease forwards 2.4s;
-  overflow: hidden;
-}
-
 .loader-wrapper {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -739,16 +733,6 @@ body {
   100% {
     opacity: 0;
     visibility: hidden;
-  }
-}
-@keyframes showMain {
-  0% {
-    height: 100vh;
-    overflow: hidden;
-  }
-  100% {
-    height: unset;
-    overflow: visible;
   }
 }
 .hero-banner {
