@@ -284,11 +284,20 @@ main {
   background: #FFF;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  cursor: pointer;
 }
-.menu-card:hover .menu-card__selected {
+@media (hover: hover) {
+  .menu-card:hover .menu-card__selected {
+    width: 59px;
+  }
+  .menu-card:hover .menu-card__selected-icon {
+    animation: wobble 1000ms;
+  }
+}
+.menu-card:active .menu-card__selected {
   width: 59px;
 }
-.menu-card:hover .menu-card__selected-icon {
+.menu-card:active .menu-card__selected-icon {
   animation: wobble 1000ms;
 }
 .menu-card__plate {
@@ -354,7 +363,6 @@ main {
   height: 22px;
   color: #FFF;
   flex-shrink: 0;
-  transform: translateX(500px);
 }
 .menu-card__selected-icon svg {
   width: 100%;
