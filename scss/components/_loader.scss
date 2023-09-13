@@ -42,6 +42,8 @@
         stroke-dashoffset: 90px;
         stroke: rgba(255, 255, 255, 0);
         animation: strokeDash 4s ease forwards 1s;
+        // animation-name: strokeDash;
+        // animation-delay: 4s;
       }
     }
   }

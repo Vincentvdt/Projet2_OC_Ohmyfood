@@ -11,6 +11,7 @@
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
   overflow: hidden;
   cursor: pointer;
+
   @media(hover: hover) {
     &:hover {
       .menu-card__selected {
@@ -87,7 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 0;
+    width: 0; // LARGEUR
     height: auto;
     align-self: stretch;
     background: #99E2D0;
