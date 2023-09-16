@@ -12,6 +12,8 @@
   overflow: hidden;
   cursor: pointer;
 
+
+
   @media(hover: hover) {
     &:hover {
       .menu-card__selected {
@@ -19,6 +21,8 @@
 
         &-icon {
           animation: wobble 1000ms;
+          //animation-name: wobble;
+          //animation-delay: 1000ms;
         }
       }
     }

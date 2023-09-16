@@ -38,12 +38,15 @@
       path {
         transform-origin: center;
         fill: none;
-        stroke-dasharray: 0; //70
+        stroke-dasharray: 0;
         stroke-dashoffset: 90px;
         stroke: rgba(255, 255, 255, 0);
         animation: strokeDash 4s ease forwards 1s;
         // animation-name: strokeDash;
         // animation-delay: 4s;
+        // animation-timing-function: ease;
+        // animation-direction: forwards;
+        // animation-delay: 1s;
       }
     }
   }

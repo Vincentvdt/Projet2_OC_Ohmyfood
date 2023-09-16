@@ -1,0 +1,4 @@
+@function customAnimationDelay($index) {
+  $delay: $index * 1000s;
+  @return $delay;
+}

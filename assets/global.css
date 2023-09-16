@@ -949,6 +949,40 @@ footer {
   border-top: 51px solid #F6F6F6;
   background: #F6F6F6;
 }
+.restaurant-page .menu__section:nth-child(1) {
+  animation: fadeInTop 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation-delay: -350ms;
+}
+.restaurant-page .menu__section:nth-child(2) {
+  animation: fadeInTop 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation-delay: 0ms;
+}
+.restaurant-page .menu__section:nth-child(3) {
+  animation: fadeInTop 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation-delay: 350ms;
+}
+.restaurant-page .menu__section:nth-child(4) {
+  animation: fadeInTop 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation-delay: 700ms;
+}
+@media (min-width: 1200px) {
+  .restaurant-page .menu__section:nth-child(1) {
+    animation: fadeInRight 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation-delay: -450ms;
+  }
+  .restaurant-page .menu__section:nth-child(2) {
+    animation: fadeInRight 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation-delay: 0ms;
+  }
+  .restaurant-page .menu__section:nth-child(3) {
+    animation: fadeInRight 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation-delay: 450ms;
+  }
+  .restaurant-page .menu__section:nth-child(4) {
+    animation: fadeInRight 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation-delay: 900ms;
+  }
+}
 @media (min-width: 1200px) {
   .restaurant-page .menu {
     width: 1055px;
@@ -981,6 +1015,7 @@ footer {
   flex-direction: column;
   gap: 12px;
   align-self: stretch;
+  opacity: 0;
 }
 .restaurant-page .menu__section-title {
   font-size: 1rem;
@@ -998,6 +1033,27 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(500px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=global.css.map */
